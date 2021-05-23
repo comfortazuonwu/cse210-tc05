@@ -1,5 +1,8 @@
 import random
 
+
+ 
+
 class Console:
     """A code template for 
     a computer console. This class of objects gets text or numerical input, displays text output and also displays the parachute.
@@ -11,22 +14,30 @@ class Console:
     gameboard(list): The parachute 
     """
 
+    
+    def __init__(self):
 
-    def game_list(self):
-
-       gameboard:["___","/ \","___","\ /","\ /","0",]
+       gameboard = ["____", "/", "\\", "____","\\" , "/","\\", "/","0","/","|","\\","/", "\\"]
 
 
-    def create_parachute(self):
+    def create_parachute(self, gameboard):
 
-       
-         _____
-        /_____\
-        \     /
-         \   /
-           0
-         / | \
-        /     \ 
+        
+        print(' ',gameboard[0])
+        print (gameboard[1], end='')
+        print('',gameboard[3], end='')
+        print("", gameboard[2])
+        print(gameboard[4], end="")
+        print('    ',gameboard[5])
+        print('',gameboard[6], end="")
+        print('  ', gameboard[7])
+        print('  ', gameboard[8])
+        print('',"/","|", "\\")
+        print(" ","/","\\")
+        print()
+        print('^^^^^^^')
+                
+        
        
     
     def get_text(self,prompt):
@@ -45,3 +56,4 @@ class Console:
 
         print(text)
         
+""" if the letter guessed is wrong, then take out something from the list"""
