@@ -1,4 +1,6 @@
 import random
+from game.word import Word
+from game.player import Player
 
 
  
@@ -17,21 +19,21 @@ class Console:
     
     def __init__(self):
 
-       gameboard = ["____", "/", "\\", "____","\\" , "/","\\", "/","0","/","|","\\","/", "\\"]
+       self.gameboard = ["____", "/", "\\", "____","\\" , "/","\\", "/","0","/","|","\\","/", "\\"]
 
 
     def create_parachute(self, gameboard):
 
         
-        print(' ',gameboard[0])
-        print (gameboard[1], end='')
-        print('',gameboard[3], end='')
-        print("", gameboard[2])
-        print(gameboard[4], end="")
-        print('    ',gameboard[5])
-        print('',gameboard[6], end="")
-        print('  ', gameboard[7])
-        print('  ', gameboard[8])
+        print(' ',self.gameboard[0])
+        print (self.gameboard[1], end='')
+        print('',self.gameboard[3], end='')
+        print("", self.gameboard[2])
+        print(self.gameboard[4], end="")
+        print('    ',self.gameboard[5])
+        print('',self.gameboard[6], end="")
+        print('  ', self.gameboard[7])
+        print('  ', self.gameboard[8])
         print('',"/","|", "\\")
         print(" ","/","\\")
         print()
@@ -52,8 +54,33 @@ class Console:
         return input(prompt)
 
 
-    def write(self,text):
-
-        print(text)
+   
         
-""" if the letter guessed is wrong, then take out something from the list"""
+    """ if the letter guessed is wrong, then take out something from the list"""
+    def check_letter(self):
+        """Checks if the letter guessed by the player is correct or not"""
+        x = 0
+        while x!= len(self.gameboard):
+            player.get_letter()
+            if get_letter in Word.letter_list:
+                y = Word.letter_list.index(get_letter)
+                Word.secretWord[y] = get_letter
+                print(Word.secretWord)
+                
+
+                
+            else:
+                x +=1
+                self.gameboard[x] = " "
+                
+    
+    
+
+            
+
+        
+
+
+
+    
+   
